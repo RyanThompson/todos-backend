@@ -36,6 +36,14 @@
                 "buttons": [
                     {
                         "handle": "create"
+                    },
+                    {
+                        "handle": "api",
+                        "text": "View API",
+                        "attributes": {
+                            "href": "/api/streams/todos/entries",
+                            "target": "_blank"
+                        }
                     }
                 ]
             }

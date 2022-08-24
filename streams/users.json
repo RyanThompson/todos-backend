@@ -44,6 +44,14 @@
                 "buttons": [
                     {
                         "handle": "create"
+                    },
+                    {
+                        "handle": "api",
+                        "text": "View API",
+                        "attributes": {
+                            "href": "/api/streams/users/entries",
+                            "target": "_blank"
+                        }
                     }
                 ]
             }

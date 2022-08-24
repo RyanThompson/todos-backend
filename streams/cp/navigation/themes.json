@@ -1,4 +1,14 @@
 {
     "stream": "themes",
-    "sort_order": 99
+    "sort_order": 99,
+    "buttons": [
+        {
+            "handle": "api",
+            "text": "View API",
+            "attributes": {
+                "href": "/api/streams/cp.themes/entries",
+                "target": "_blank"
+            }
+        }
+    ]
 }
