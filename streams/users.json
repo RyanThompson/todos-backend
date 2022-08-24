@@ -1,0 +1,67 @@
+{
+    "name": "Users",
+    "handle": "users",
+    "description": "The app users.",
+    "config": {
+        "source": {
+            "type": "eloquent",
+            "model": "App\\Models\\User"
+        }
+    },
+    "fields": {
+        "id": {
+            "type": "integer",
+            "required": true,
+            "unique": true,
+            "rules": ["min:1"],
+            "config": {
+                "default": "increment"
+            }
+        },
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "email": {
+            "type": "email"
+        },
+        "password": {
+            "type": "hash",
+            "config": {
+                "default": false
+            }
+        }
+    },
+    "ui": {
+        "cp": {
+            "section": {
+                "buttons": [
+                    {
+                        "handle": "create"
+                    }
+                ]
+            }
+        },
+        "tables": [
+            {
+                "handle": "default",
+                "filters": [{ "handle": "title" }],
+                "columns": [
+                    {
+                        "handle": "email",
+                        "value": "<a class=\"underline\" href=\"mailto:{entry.email}\">{entry.email}</a>",
+                        "is_safe": true
+                    },
+                    { "handle": "name" }
+                ],
+                "buttons": [
+                    {
+                        "handle": "edit",
+                        "text": "Edit"
+                    }
+                ],
+                "actions": [{ "handle": "delete" }]
+            }
+        ]
+    }
+}

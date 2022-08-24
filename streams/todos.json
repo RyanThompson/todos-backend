@@ -21,10 +21,7 @@
             "required": true
         },
         "complete": {
-            "type": "boolean",
-            "config": {
-                "default": false
-            }
+            "type": "boolean"
         },
         "editing": {
             "type": "boolean",
@@ -46,12 +43,18 @@
         "tables": [
             {
                 "handle": "default",
-                "filters": [
-                    {"handle": "title"}
-                ],
+                "filters": [{ "handle": "title" }],
                 "columns": [
-                    {"handle": "id"},
-                    {"handle": "complete"}
+                    { "handle": "title" },
+                    {
+                        "handle": "complete",
+                        "attributes": {
+                            "onclick": "alert('{{ $entry->title }}');"
+                        },
+                        "value": {
+                            "template": "{{ $entry->complete ? 'Yes' : 'No' }}"
+                        }
+                    }
                 ],
                 "buttons": [
                     {
@@ -66,7 +69,8 @@
                             "class": ["a-button", "-secondary"]
                         }
                     }
-                ]
+                ],
+                "actions": [{ "handle": "delete" }]
             }
         ]
     }
