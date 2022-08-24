@@ -3681,7 +3681,7 @@
             "dist": {
                 "type": "path",
                 "url": "../packages/streams-core",
-                "reference": "d4b31ee2670c44a2643adc3d2664e10b39d413fe"
+                "reference": "8eecbeb3b4882ab17760fc08564eeb98c8f67606"
             },
             "require": {
                 "goldspecdigital/oooas": "^2.10",

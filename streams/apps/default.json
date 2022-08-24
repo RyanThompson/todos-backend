@@ -1,6 +1,5 @@
 {
-    "match": ["*?theme=*"],
     "config": {
-        "streams.ui.cp_theme": "{request.input.theme}"
+        "streams.ui.cp_theme": "orange"
     }
 }
