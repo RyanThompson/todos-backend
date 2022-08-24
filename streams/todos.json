@@ -56,9 +56,6 @@
                     { "handle": "title" },
                     {
                         "handle": "complete",
-                        "attributes": {
-                            "onclick": "alert('{{ $entry->title }}');"
-                        },
                         "value": {
                             "template": "{{ $entry->complete ? 'Yes' : 'No' }}"
                         }
