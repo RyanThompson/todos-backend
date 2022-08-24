@@ -1,0 +1,73 @@
+{
+    "name": "Todos",
+    "handle": "todos",
+    "description": "An example todos app.",
+    "config": {
+        "cache": {
+            "enabled": true
+        }
+    },
+    "fields": {
+        "id": {
+            "type": "uuid",
+            "required": true,
+            "unique": true,
+            "config": {
+                "default": true
+            }
+        },
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "complete": {
+            "type": "boolean",
+            "config": {
+                "default": false
+            }
+        },
+        "editing": {
+            "type": "boolean",
+            "config": {
+                "default": false
+            }
+        }
+    },
+    "ui": {
+        "cp": {
+            "section": {
+                "buttons": [
+                    {
+                        "handle": "create"
+                    }
+                ]
+            }
+        },
+        "tables": [
+            {
+                "handle": "default",
+                "filters": [
+                    {"handle": "title"}
+                ],
+                "columns": [
+                    {"handle": "id"},
+                    {"handle": "complete"}
+                ],
+                "buttons": [
+                    {
+                        "handle": "edit",
+                        "text": "Edit"
+                    },
+                    {
+                        "text": "Code",
+                        "handle": "code",
+                        "attributes": {
+                            "href": "vscode://file{app.base_path}/streams/data/todos/{entry.id}.json",
+                            "class": ["a-button", "-secondary"]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
