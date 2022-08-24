@@ -8,6 +8,12 @@
             "model": "App\\Models\\User"
         }
     },
+    "routes": [
+        {
+            "uri": "/cp/users/{id}/check",
+            "uses": "App\\Http\\Controllers\\CheckPassword"
+        }
+    ],
     "fields": {
         "id": {
             "type": "integer",
@@ -61,6 +67,25 @@
                     }
                 ],
                 "actions": [{ "handle": "delete" }]
+            }
+        ],
+        "forms": [
+            {
+                "handle": "default",
+                "buttons": [
+                    {
+                        "handle": "check",
+                        "attributes": {
+                            "href": "{request.url}/../check"
+                        }
+                    }
+                ]
+            },
+            {
+                "handle": "check_password",
+                "fields": [
+                    "password"
+                ]
             }
         ]
     }
