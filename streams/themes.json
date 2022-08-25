@@ -1,0 +1,22 @@
+{
+    "handle": "themes",
+    "extends": "cp.themes",
+    "ui": {
+        "tables": [
+            {
+                "handle": "default",
+                "buttons": [
+                    {
+                        "handle": "edit"
+                    },
+                    {
+                        "handle": "preview",
+                        "attributes": {
+                            "href": "{request.url}?theme={entry.id}"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

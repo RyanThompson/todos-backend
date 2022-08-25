@@ -20,11 +20,15 @@
             "type": "string",
             "required": true
         },
-        "complete": {
-            "type": "boolean",
-            "config": {
-                "default": false
+        "description": {
+            "type": "string",
+            "required": true,
+            "input": {
+                "type": "textarea"
             }
+        },
+        "complete": {
+            "type": "boolean"
         },
         "editing": {
             "type": "boolean",
@@ -39,6 +43,14 @@
                 "buttons": [
                     {
                         "handle": "create"
+                    },
+                    {
+                        "handle": "api",
+                        "text": "View API",
+                        "attributes": {
+                            "href": "/api/streams/todos/entries",
+                            "target": "_blank"
+                        }
                     }
                 ]
             }
@@ -46,14 +58,25 @@
         "tables": [
             {
                 "handle": "default",
-                "filters": [
-                    {"handle": "title"}
-                ],
+                "filters": [{ "handle": "title" }],
                 "columns": [
-                    {"handle": "id"},
-                    {"handle": "complete"}
+                    { "handle": "title" },
+                    {
+                        "handle": "complete",
+                        "value": {
+                            "template": "{{ $entry->complete ? 'Yes' : 'No' }}"
+                        }
+                    }
                 ],
                 "buttons": [
+                    {
+                        "text": "Toggle",
+                        "handle": "toggle",
+                        "attributes": {
+                            "href": "{request.url}/{entry.id}/toggle",
+                            "class": ["a-button", "-link"]
+                        }
+                    },
                     {
                         "handle": "edit",
                         "text": "Edit"
@@ -66,7 +89,8 @@
                             "class": ["a-button", "-secondary"]
                         }
                     }
-                ]
+                ],
+                "actions": [{ "handle": "delete" }]
             }
         ]
     }
