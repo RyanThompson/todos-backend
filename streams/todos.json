@@ -5,6 +5,10 @@
     "config": {
         "cache": {
             "enabled": true
+        },
+        "source": {
+            "type": "database",
+            "table": "todos"
         }
     },
     "fields": {
@@ -28,7 +32,10 @@
             }
         },
         "complete": {
-            "type": "boolean"
+            "type": "boolean",
+            "config": {
+                "default": false
+            }
         },
         "editing": {
             "type": "boolean",
