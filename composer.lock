@@ -3741,7 +3741,7 @@
             "dist": {
                 "type": "path",
                 "url": "../packages/streams-ui",
-                "reference": "7d37d46bbfb8edf6dc244d614dc50e08523b7d88"
+                "reference": "3fad394c3421427700ba5267fee42161a538c243"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^1.3",

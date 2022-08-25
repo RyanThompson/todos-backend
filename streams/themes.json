@@ -12,7 +12,8 @@
                     {
                         "handle": "preview",
                         "attributes": {
-                            "href": "{request.url}?theme={entry.id}"
+                            "href": "{request.url}?theme={entry.id}",
+                            "class": ["a-button", "-secondary"]
                         }
                     }
                 ]
