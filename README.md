@@ -58,7 +58,7 @@ To use a Laravel supported database first update the stream configuration:
 Then, run the database migration:
 
 ```bash
-php artisan migrate --path=database/migrations
+php artisan migrate
 ```
 
 ### Other Storage Options
