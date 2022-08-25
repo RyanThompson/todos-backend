@@ -1,5 +1,5 @@
 {
     "config": {
-        "streams.ui.cp_theme": "orange"
+        "streams.ui.cp_theme": "default"
     }
 }

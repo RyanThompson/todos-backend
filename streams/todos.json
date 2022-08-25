@@ -20,6 +20,13 @@
             "type": "string",
             "required": true
         },
+        "description": {
+            "type": "string",
+            "required": true,
+            "input": {
+                "type": "textarea"
+            }
+        },
         "complete": {
             "type": "boolean"
         },
@@ -62,6 +69,14 @@
                     }
                 ],
                 "buttons": [
+                    {
+                        "text": "Toggle",
+                        "handle": "toggle",
+                        "attributes": {
+                            "href": "{request.url}/{entry.id}/toggle",
+                            "class": ["a-button", "-link"]
+                        }
+                    },
                     {
                         "handle": "edit",
                         "text": "Edit"
