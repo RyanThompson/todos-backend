@@ -22,13 +22,15 @@
         },
         "description": {
             "type": "string",
-            "required": true,
             "input": {
                 "type": "textarea"
             }
         },
         "complete": {
-            "type": "boolean"
+            "type": "boolean",
+            "config": {
+                "default": false
+            }
         },
         "editing": {
             "type": "boolean",

@@ -13,6 +13,7 @@ Besides the Blade front-end that is included, you may also be interested in:
 - Clone this repository locally.
 - Run `composer install` within the project.
 - Run `cp .env.example .env` and adjust as needed.
+- Run `php artisan key:generate` to secure your install.
 - Use `php artisan serve` to start your local server.
 
 ### Your First Todo
@@ -23,7 +24,8 @@ The API is now ready to use:
 curl --location --request POST 'http://127.0.0.1:8000/api/streams/todos/entries' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "title": "Your first todo!"
+    "title": "Your first todo!",
+    "description": "Remember to do the one thing."
 }'
 ```
 
@@ -56,7 +58,7 @@ To use a Laravel supported database first update the stream configuration:
 Then, run the database migration:
 
 ```bash
-php artisan migrate --path=database/migrations
+php artisan migrate
 ```
 
 ### Other Storage Options
