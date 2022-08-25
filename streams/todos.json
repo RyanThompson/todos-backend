@@ -5,10 +5,6 @@
     "config": {
         "cache": {
             "enabled": true
-        },
-        "source": {
-            "type": "database",
-            "table": "todos"
         }
     },
     "fields": {
@@ -26,7 +22,6 @@
         },
         "description": {
             "type": "string",
-            "required": true,
             "input": {
                 "type": "textarea"
             }
